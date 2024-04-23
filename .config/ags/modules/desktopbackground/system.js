@@ -129,33 +129,41 @@ const distroAndVersion = Box({
     ]
 })
 
-export default () => Box({
-    hpack: 'end',
-    vpack: 'end',
-    children: [
-        EventBox({
-            child: Box({
-                hpack: 'end',
-                vpack: 'end',
-                className: 'bg-distro-box spacing-v-20',
-                vertical: true,
-                children: [
-                    resources,
-                    distroAndVersion,
-                ]
-            }),
-            onPrimaryClickRelease: () => {
-                const kids = resources.get_children();
-                for (let i = 0; i < kids.length; i++) {
-                    const child = kids[i];
-                    const firstChild = child.get_children()[0];
-                    firstChild.revealChild = !firstChild.revealChild;
-                }
+export default () => {
+    onClicked();
+    return Box({
+        hpack: 'end',
+        vpack: 'end',
+        children: [
+            EventBox({
+                child: Box({
+                    hpack: 'end',
+                    vpack: 'end',
+                    className: 'bg-distro-box spacing-v-20',
+                    vertical: true,
+                    children: [
+                        resources,
+                        distroAndVersion,
+                    ]
+                }),
+                onPrimaryClickRelease: () => {
+                    const kids = resources.get_children();
+                    for (let i = 0; i < kids.length; i++) {
+                        const child = kids[i];
+                        const firstChild = child.get_children()[0];
+                        firstChild.revealChild = !firstChild.revealChild;
+                    }
+                },
+            })
+        ],
+    });
+};
 
-            },
-        })
-    ],
-})
-
-
-
+const onClicked = (self, callback) => {
+    const kids = resources.get_children();
+    for (let i = 0; i < kids.length; i++) {
+        const child = kids[i];
+        const firstChild = child.get_children()[0];
+        firstChild.revealChild = !firstChild.revealChild;
+}
+};

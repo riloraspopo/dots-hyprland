@@ -113,6 +113,8 @@ let configOptions = {
             'pavucontrol-qt': "pavucontrol",
             'wps': "wps-office2019-kprometheus",
             'wpsoffice': "wps-office2019-kprometheus",
+            'Brave-browser': 'brave-desktop',
+            'org.telegram.desktop': 'telegram',
             '': "image-missing",
         }
     },

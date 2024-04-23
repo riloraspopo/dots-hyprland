@@ -1,4 +1,18 @@
 <div align="center">
+    <h1>【 This is My Setting for 】</h1>
+</div>
+
+</div>
+
+<details> 
+   <summary>What diff</summary>
+
+  - **Using ZSH**: i'm usually using zsh over fish,
+  - **Using Brave**: using brave over firefox
+  - **Added Startup some apps**
+  - **My own keybinding**, a lot
+</details>
+<div align="center">
     <h1>【 end_4's Hyprland dotfiles 】</h1>
     <h3></h3>
 </div>
