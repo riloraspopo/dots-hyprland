@@ -94,9 +94,9 @@ case $SKIP_HYPR_AUR in
   true) sleep 0;;
   *)
     if $ask;then
-      v $AUR_HELPER -S --answerclean=a hyprland-git
+      v $AUR_HELPER -S hyprland-git
     else
-      v $AUR_HELPER -S --answerclean=a --noconfirm hyprland-git
+      v $AUR_HELPER -S --noconfirm hyprland-git
     fi
     ;;
 esac
